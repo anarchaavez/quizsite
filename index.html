@@ -18,12 +18,11 @@
   </style>
 </head>
 <body>
-  
-<div id="home-screen" style="text-align: center;">
-  <h1 style="font-size: 48px; margin-top: 80px;">🚑 Squad 1 Medical Quiz</h1>
-  <p style="font-size: 20px;">Welcome! Test your knowledge on Adult Medical Emergencies.</p>
-  <button id="start-btn" style="margin-top: 30px; font-size: 24px; padding: 10px 20px;">Begin Quiz</button>
-</div>
+  <div id="home-screen" style="text-align: center;">
+    <h1 style="font-size: 48px; margin-top: 80px;">🚑 Squad 1 Medical Quiz</h1>
+    <p style="font-size: 20px;">Welcome! Test your knowledge on Adult Medical Emergencies.</p>
+    <button id="start-btn" style="margin-top: 30px; font-size: 24px; padding: 10px 20px;">Begin Quiz</button>
+  </div>
 
   <div id="quiz-screen" style="display: none;">
     
@@ -190,21 +189,28 @@ function submitQuiz() {
 </script>
 
   </div>
+
   <div id="result-screen" style="display: none; text-align: center;">
     <h2>Your Score</h2>
     <p id="score-output" style="font-size: 22px;"></p>
     <h3>Review Missed Questions:</h3>
     <ul id="missed-list" style="text-align: left; max-width: 800px; margin: 0 auto;"></ul>
   </div>
+
   
 <script>
-  window.onload = function() {
-    document.getElementById("start-btn").addEventListener("click", function() {
-      document.getElementById("home-screen").style.display = "none";
-      document.getElementById("quiz-screen").style.display = "block";
-      window.scrollTo(0, 0);
-    });
-  }
+  document.addEventListener("DOMContentLoaded", function() {
+    const startBtn = document.getElementById("start-btn");
+    if (startBtn) {
+      startBtn.addEventListener("click", function() {
+        const home = document.getElementById("home-screen");
+        const quiz = document.getElementById("quiz-screen");
+        if (home) home.style.display = "none";
+        if (quiz) quiz.style.display = "block";
+        window.scrollTo(0, 0);
+      });
+    }
+  });
 
   function submitQuiz() {
     const selects = document.querySelectorAll("#quiz-screen select");
