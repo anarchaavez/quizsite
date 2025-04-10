@@ -209,22 +209,20 @@ function submitQuiz() {
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      const startBtn = document.getElementById("start-btn");
-      const quizScreen = document.getElementById("quiz-screen");
       const homeScreen = document.getElementById("home-screen");
+      const quizScreen = document.getElementById("quiz-screen");
       const resultScreen = document.getElementById("result-screen");
-      const sections = document.querySelectorAll("#quiz-screen .section");
+      const sections = document.querySelectorAll(".section");
       let currentSection = 0;
 
-      if (startBtn) {
-        startBtn.addEventListener("click", function() {
-          homeScreen.style.display = "none";
-          quizScreen.style.display = "block";
-          if (sections.length > 0) {
-            sections[0].classList.add("active");
-          }
-        });
-      }
+      document.getElementById("start-btn").addEventListener("click", function() {
+        homeScreen.style.display = "none";
+        quizScreen.style.display = "block";
+        if (sections.length > 0) {
+          sections.forEach(s => s.classList.remove("active"));
+          sections[0].classList.add("active");
+        }
+      });
 
       document.getElementById("prev-btn").addEventListener("click", function() {
         if (sections.length === 0) return;
@@ -272,7 +270,6 @@ function submitQuiz() {
           li.innerText = text;
           missedList.appendChild(li);
         });
-
         window.scrollTo(0, 0);
       });
     });
