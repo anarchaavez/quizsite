@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +15,7 @@
     select { font-size: 16px; }
     .section { display: none; }
     .section.active { display: block; }
+    #nav-buttons { margin: 20px 0; text-align: center; }
   </style>
 </head>
 <body>
@@ -24,53 +26,178 @@
   </div>
 
   <div id="quiz-screen" style="display: none;">
-    <h1>Complete Medical Emergencies Quiz</h1>
     <div id="quiz-container">
-      <div class="section">
-        <h1>3.1 ADRENAL INSUFFICIENCY</h1>
-        <p>
-          3.1 
-          <select data-answer="adrenal insufficiency">
-            <option value="">Select...</option>
-            <option value="asthma">asthma</option>
-            <option value="adrenal insufficiency">adrenal insufficiency</option>
-            <option value="anaphylaxis">anaphylaxis</option>
-            <option value="DKA">DKA</option>
-          </select>
-        </p>
-        <p>Standing Orders</p>
-        <p>1. Obtain 
-          <select data-answer="vascular access">
-            <option value="">Select...</option>
-            <option value="oxygen therapy">oxygen therapy</option>
-            <option value="CPAP">CPAP</option>
-            <option value="cardiac monitoring">cardiac monitoring</option>
-            <option value="vascular access">vascular access</option>
-          </select>. Routine Patient Care.
-        </p>
-        <p>2. Maintain adequate mentation (following commands) or 
-          <select data-answer="MAP">
-            <option value="">Select...</option>
-            <option value="BP">BP</option>
-            <option value="ETCO2">ETCO2</option>
-            <option value="RR">RR</option>
-            <option value="MAP">MAP</option>
-          </select> > 65 mmHg, consider 
-          <select data-answer="fluid bolus">
-            <option value="">Select...</option>
-            <option value="fluid bolus">fluid bolus</option>
-            <option value="CPAP">CPAP</option>
-            <option value="vascular access">vascular access</option>
-            <option value="airway control">airway control</option>
-          </select> as needed.
-        </p>
-        <!-- Additional content omitted for brevity -->
-      </div>
-      <!-- Add remaining sections here -->
+      
+<div id="home-screen" style="text-align: center;">
+<h1 style="font-size: 48px; margin-top: 80px;">🚑 Squad 1 Medical Quiz</h1>
+<p style="font-size: 20px;">Welcome! Test your knowledge on Adult Medical Emergencies.</p>
+<button onclick="startQuiz()" style="margin-top: 30px; font-size: 24px; padding: 10px 20px;">Begin Quiz</button>
+</div>
+<div id="quiz-screen" style="display: none;">
+<h1>Complete Medical Emergencies Quiz</h1>
+<div id="quiz-container">
+<div class="section">
+<h1>3.1 ADRENAL INSUFFICIENCY</h1>
+<p><br/>3.1 <select data-answer="adrenal insufficiency"><option value="">Select...</option><option value="asthma">asthma</option><option value="adrenal insufficiency">adrenal insufficiency</option><option value="anaphylaxis">anaphylaxis</option><option value="DKA">DKA</option></select></p><p>Standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="oxygen therapy">oxygen therapy</option><option value="CPAP">CPAP</option><option value="cardiac monitoring">cardiac monitoring</option><option value="vascular access">vascular access</option></select>. Routine Patient Care.</p><p>2. Maintain adequate mentation (following commands) or <select data-answer="MAP"><option value="">Select...</option><option value="BP">BP</option><option value="ETCO2">ETCO2</option><option value="RR">RR</option><option value="MAP">MAP</option></select> &gt; 65 mmHg, consider <select data-answer="fluid bolus"><option value="">Select...</option><option value="fluid bolus">fluid bolus</option><option value="CPAP">CPAP</option><option value="vascular access">vascular access</option><option value="airway control">airway control</option></select> as needed.</p><p>3. <select data-answer="Vasopressor"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="Vasopressor">Vasopressor</option><option value="shock state">shock state</option><option value="asthma">asthma</option></select> (Norepinephrine preferred) infusion to maintain adequate mentation (following commands) or MAP &gt; 65 mmHg (see Protocol 3.16: Shock States).</p><p>4. If signs of adrenal crisis/insufficiency are present, administer “stress-dose” <select data-answer="Hydrocortisone"><option value="">Select...</option><option value="Hydrocortisone">Hydrocortisone</option><option value="hypothermia">hypothermia</option><option value="anaphylaxis">anaphylaxis</option><option value="trauma">trauma</option></select> 100 mg <select data-answer="IV"><option value="">Select...</option><option value="trauma">trauma</option><option value="hypothermia">hypothermia</option><option value="IV">IV</option><option value="hyperkalemia">hyperkalemia</option></select>/<select data-answer="IO"><option value="">Select...</option><option value="hypothermia">hypothermia</option><option value="stroke">stroke</option><option value="IO">IO</option><option value="anaphylaxis">anaphylaxis</option></select>/<select data-answer="IM"><option value="">Select...</option><option value="IM">IM</option><option value="hyperkalemia">hyperkalemia</option><option value="trauma">trauma</option><option value="anaphylaxis">anaphylaxis</option></select> (heavily preferred) OR <select data-answer="Methylprednisolone"><option value="">Select...</option><option value="Methylprednisolone">Methylprednisolone</option><option value="hyperthermia">hyperthermia</option><option value="asthma">asthma</option><option value="trauma">trauma</option></select> 125 mg IV/IO/IM.</p><p>+ IV steroids should be given to patients with known chronic adrenal insufficiency (also referred to as <select data-answer="Addison's Disease"><option value="">Select...</option><option value="shock state">shock state</option><option value="hypothermia">hypothermia</option><option value="hypoglycemia">hypoglycemia</option><option value="Addison's Disease">Addison's Disease</option></select>) who have the following illnesses/injuries:</p><p>+ <select data-answer="Shock state"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="Shock state">Shock state</option><option value="hypothermia">hypothermia</option><option value="anaphylaxis">anaphylaxis</option></select>;</p><p>+ Fever with ill-appearance;</p><p>+ Multi-system <select data-answer="trauma"><option value="">Select...</option><option value="hyperkalemia">hyperkalemia</option><option value="trauma">trauma</option><option value="hypothermia">hypothermia</option><option value="addison's disease">addison's disease</option></select>;</p><p>+ Drowning;</p><p>+ Environmental HYPER/<select data-answer="Hypothermia"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="stroke">stroke</option><option value="Hypothermia">Hypothermia</option><option value="sepsis">sepsis</option></select>;</p><p>+ Vomiting/Diarrhea with <select data-answer="dehydration"><option value="">Select...</option><option value="dehydration">dehydration</option><option value="DKA">DKA</option><option value="trauma">trauma</option><option value="anaphylaxis">anaphylaxis</option></select>;</p><p>+ 2nd or 3rd Degree burns with &gt; 5% BSA involvement;</p><p>+ <select data-answer="Hypoglycemia"><option value="">Select...</option><option value="hyperthermia">hyperthermia</option><option value="shock state">shock state</option><option value="hypothermia">hypothermia</option><option value="Hypoglycemia">Hypoglycemia</option></select>.</p><p>Medical Control Options</p><p>1. Repeat doses of the above medications.<br/></p>
+</div><div class="section">
+<section>
+<h1>3.2 ALLERGIC REACTION/ANAPHYLAXIS</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="airway control">airway control</option><option value="CPAP">CPAP</option><option value="BVM ventilation">BVM ventilation</option><option value="vascular access">vascular access</option></select>. Routine Patient Care.<br/>2. Administer <select data-answer="oxygen"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="oxygen">oxygen</option><option value="sepsis">sepsis</option><option value="trauma">trauma</option></select> as needed to manage <select data-answer="hypoxia"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="addison's disease">addison's disease</option><option value="sepsis">sepsis</option><option value="hypoxia">hypoxia</option></select>.</p><p>3. Maintain adequate mentation (following commands) or systolic<br/>blood pressure &gt; 100 mmHg, consider <select data-answer="fluid bolus"><option value="">Select...</option><option value="oxygen therapy">oxygen therapy</option><option value="CPAP">CPAP</option><option value="fluid bolus">fluid bolus</option><option value="cardiac monitoring">cardiac monitoring</option></select> as routine care<br/>for <select data-answer="anaphylaxis"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="asthma">asthma</option><option value="stroke">stroke</option><option value="trauma">trauma</option></select>.</p><p>* In the setting of anaphylactic hypotension initiate Aggressive<br/><select data-answer="IV Fluid resuscitation"><option value="">Select...</option><option value="hyperkalemia">hyperkalemia</option><option value="hypothermia">hypothermia</option><option value="shock state">shock state</option><option value="IV Fluid resuscitation">IV Fluid resuscitation</option></select> (1-2 L appropriate prehospitally).</p><p>4. For simple allergic reactions, consider <select data-answer="Diphenhydramine"><option value="">Select...</option><option value="Midazolam">Midazolam</option><option value="Diphenhydramine">Diphenhydramine</option><option value="Naloxone">Naloxone</option><option value="Lorazepam">Lorazepam</option></select> 25-50 mg<br/>IV/IO/IM.<br/>5. For severe distress, administer <select data-answer="Epinephrine"><option value="">Select...</option><option value="Epinephrine">Epinephrine</option><option value="Lorazepam">Lorazepam</option><option value="Morphine">Morphine</option><option value="Promethazine">Promethazine</option></select> 0.3 mg IM and consider<br/>the medications listed below.<br/>+ Second dose may be administered in 5 minutes, if necessary.</p><p>6. Albuterol 2.5 mg via nebulizer, repeated every 5 minutes up to 4<br/>total doses for wheezing/respiratory distress.</p><p>7. Methylprednisolone 125 mg |V/IO/IM (heavily preferred) OR<br/>Hydrocortisone 100 mg |V/|O/IM.</p><p>8. Vasopressor (Epinephrine preferred) infusion to maintain SBP &gt;<br/>100 mmHg (see Protocol 3.16: Shock States).</p><p>+ Note — When treating anaphylaxis with hypotension,<br/>administering a second IM Epinephrine should indicate the need<br/>to proactively assemble an Epinephrine infusion. The second IM<br/>Epinephrine acts as a bridge to give you time to prepare that<br/>infusion!</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.3 ALTERED MENTAL STATUS</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="BVM ventilation">BVM ventilation</option><option value="vascular access">vascular access</option><option value="fluid bolus">fluid bolus</option><option value="IV fluids">IV fluids</option></select>. Routine Patient Care.</p><p>2. Immediate assessment of the <select data-answer="primary survey"><option value="">Select...</option><option value="asthma">asthma</option><option value="hypoglycemia">hypoglycemia</option><option value="anaphylaxis">anaphylaxis</option><option value="primary survey">primary survey</option></select> and stabilization of<br/>life-threats.</p><p>Determine comprehensive <select data-answer="mental status"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="mental status">mental status</option><option value="sepsis">sepsis</option><option value="DKA">DKA</option></select> — <select data-answer="AVPU"><option value="">Select...</option><option value="shock state">shock state</option><option value="hypothermia">hypothermia</option><option value="hyperthermia">hyperthermia</option><option value="AVPU">AVPU</option></select>.</p><p>Obtain point-of-care <select data-answer="blood glucose"><option value="">Select...</option><option value="blood glucose">blood glucose</option><option value="anaphylaxis">anaphylaxis</option><option value="addison's disease">addison's disease</option><option value="trauma">trauma</option></select> level, and consider use of end-<br/>tidal waveform <select data-answer="capnography"><option value="">Select...</option><option value="capnography">capnography</option><option value="vascular access">vascular access</option><option value="airway control">airway control</option><option value="oxygen therapy">oxygen therapy</option></select>.</p><p>5. Attempt <select data-answer="neurologic assessment"><option value="">Select...</option><option value="neurologic assessment">neurologic assessment</option><option value="sepsis">sepsis</option><option value="hyperkalemia">hyperkalemia</option><option value="asthma">asthma</option></select>.</p><p>6. Consider more intensive investigation of the scene and interview of<br/>bystanders to obtain both <select data-answer="history"><option value="">Select...</option><option value="trauma">trauma</option><option value="sepsis">sepsis</option><option value="hyperthermia">hyperthermia</option><option value="history">history</option></select> of the present illness and past<br/>medical history.</p><p>7. Key cause considerations — stroke, seizure, infection, toxicity, trauma,<br/>adrenal crisis, behavioral.</p><p>Medical Control Options</p><p>8. N/A.</p>
+</section>
+</div><div class="section">
+<section>
+<h1>3.4 BEHAVIORAL EMERGENCIES</h1>
+<p>standing Orders</p><p>1. Attempt <select data-answer="verbal de-escalation"><option value="">Select...</option><option value="verbal de-escalation">verbal de-escalation</option><option value="sepsis">sepsis</option><option value="hypothermia">hypothermia</option><option value="hypoglycemia">hypoglycemia</option></select>.</p><p>2. Attempt to ascertain if the patient has capacity to make medical<br/>decisions.</p><p>Maintain bystander and provider safety.</p><p>Consider use of <select data-answer="restraints"><option value="">Select...</option><option value="DKA">DKA</option><option value="hypothermia">hypothermia</option><option value="asthma">asthma</option><option value="restraints">restraints</option></select>, if indicated for patient and/or provider<br/>safety with assistance of <select data-answer="law enforcement"><option value="">Select...</option><option value="law enforcement">law enforcement</option><option value="hyperkalemia">hyperkalemia</option><option value="hypoglycemia">hypoglycemia</option><option value="addison's disease">addison's disease</option></select> personnel.</p><p>Use least restrictive method possible;</p><p>Use only <select data-answer="soft restraints"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="soft restraints">soft restraints</option><option value="asthma">asthma</option><option value="stroke">stroke</option></select> (if handcuffs are used, handcuffs<br/>must be in front with key readily accessible);</p><p>Provide <select data-answer="padding"><option value="">Select...</option><option value="padding">padding</option><option value="hyperthermia">hyperthermia</option><option value="hypoglycemia">hypoglycemia</option><option value="trauma">trauma</option></select> to restrained extremities and head, as<br/>needed;</p><p>A minimum of 4 providers should be present for restraint of<br/>an individual to maintain safety;</p><p>A patient should NEVER be transported in the prone position<br/>or with equipment that forms a “sandwich” around a patient.</p><p>5. Consider administration of pharmacological agent if needed to<br/>maintain patient and/or provider safety.</p><p>+ Haloperidol 5-10 mg |M ONLY<br/>+ Should be paired with Midazolam 0.1 mg/kg;<br/>+ Midazolam 0.1 mg/kg |V/!O/IM/IN to maximum dose of 6 mg;</p><p>+ Ketamine 4 mg/kg |M only, to maximum single dose of 400<br/>mg.</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.5 BRONCHOSPASM/RESPIRATORY DISTRESS</h1>
+<p>standing Orders</p><p>Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="cardiac monitoring">cardiac monitoring</option><option value="IV fluids">IV fluids</option><option value="vascular access">vascular access</option><option value="capnography">capnography</option></select>. Routine Patient Care.<br/>Administer <select data-answer="oxygen"><option value="">Select...</option><option value="DKA">DKA</option><option value="hyperthermia">hyperthermia</option><option value="oxygen">oxygen</option><option value="addison's disease">addison's disease</option></select>.</p><p><select data-answer="Albuterol"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="stroke">stroke</option><option value="Albuterol">Albuterol</option><option value="addison's disease">addison's disease</option></select> 2.5 mg via nebulizer. <select data-answer="Ipratropium Bromide"><option value="">Select...</option><option value="shock state">shock state</option><option value="trauma">trauma</option><option value="hypoglycemia">hypoglycemia</option><option value="Ipratropium Bromide">Ipratropium Bromide</option></select> 0.5 mg may<br/>be combined with Albuterol treatment. Additional Albuterol may be<br/>administered as needed with or without additional Ipratropium<br/>Bromide.</p><p>For severe distress, <select data-answer="Epinephrine"><option value="">Select...</option><option value="Epinephrine">Epinephrine</option><option value="Dexamethasone">Dexamethasone</option><option value="Midazolam">Midazolam</option><option value="Promethazine">Promethazine</option></select> 0.3 mg IM as a one-time dose.</p><p>In patients with a known history of asthma or COPD, consider<br/><select data-answer="Methylprednisolone"><option value="">Select...</option><option value="Methylprednisolone">Methylprednisolone</option><option value="trauma">trauma</option><option value="hypothermia">hypothermia</option><option value="hyperthermia">hyperthermia</option></select> 125 mg |V/|0/IM (heavily preferred) or<br/><select data-answer="Hydrocortisone"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="Hydrocortisone">Hydrocortisone</option><option value="asthma">asthma</option><option value="hyperkalemia">hyperkalemia</option></select> 100 mg |V/|O/IM.</p><p>For moderate/severe distress due to asthma only, consider<br/>Magnesium Sulfate 2-4 g over 20 minutes.</p><p>Consider the use of CPAP for signs of respiratory distress after<br/>administration of the above.</p><p>+ Initiate at 5 cm H20O; titrate PEEP as needed;</p><p>+ Use with caution when SBP &lt; 90 mmHg, decreased LOC and/<br/>or active vomiting/airway hemorrhage.</p><p>Note — In the setting of suspected pneumonia — oxygen &amp; CPAP are<br/>the recommended prehospital treatments. Duoneb treatment(s) should<br/>be withheld, unless the patient has a history of Asthma/COPD with<br/>concurrent wheezes on auscultation.</p><p>Medical Control Options</p><p>1.</p><p>Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.6 DIABETIC EMERGENCIES</h1>
+<p>standing Orders</p><p>1. For <select data-answer="hypoglycemia"><option value="">Select...</option><option value="stroke">stroke</option><option value="hypoglycemia">hypoglycemia</option><option value="anaphylaxis">anaphylaxis</option><option value="asthma">asthma</option></select> (point-of-care blood glucose levels &lt; 70 mg/dL in<br/>adults &amp; pediatrics, &lt; 50 mg/dL in neonates) —</p><p>+ If the patient is alert and protecting their own airway/able to<br/>swallow — consider <select data-answer="oral glucose"><option value="">Select...</option><option value="trauma">trauma</option><option value="hyperthermia">hyperthermia</option><option value="oral glucose">oral glucose</option><option value="asthma">asthma</option></select> or sugary liquids (i.e. orange<br/>juice). Once the patient’s BGL returns to normal they should<br/>be advised to eat a meal with complex carbohydrates.</p><p>+ If the patient is not alert or cannot protect their own airway —<br/>+ Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="vascular access">vascular access</option><option value="IV fluids">IV fluids</option><option value="cardiac monitoring">cardiac monitoring</option><option value="fluid bolus">fluid bolus</option></select>.</p><p>+ Administer <select data-answer="Dextrose"><option value="">Select...</option><option value="trauma">trauma</option><option value="DKA">DKA</option><option value="stroke">stroke</option><option value="Dextrose">Dextrose</option></select> 10% 12.5-25 g IVP (may also give<br/>Dextrose 50%).</p><p>+ If unable to obtain IV access administer Glucagon 1 mg<br/>IM</p><p>2. For hyperglycemia (point-of-care blood glucose levels &gt; 250 mg/dL)<br/>+ Obtain vascular access.<br/>+ Administer appropriate IV fluid bolus.</p><p>+ The hyperglycemic state is rarely, if ever, the primary issue. This<br/>necessitates investigation of possible metabolic stressors such<br/>as stroke, myocardial infarction, infection, gastrointestinal<br/>hemorrhage, traumatic injury, burn, etc.</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.7 HYPERKALEMIA</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="IV fluids">IV fluids</option><option value="capnography">capnography</option><option value="vascular access">vascular access</option><option value="BVM ventilation">BVM ventilation</option></select>. Routine Patient Care.</p><p>2. Should be suspected in patients at high risk for developing<br/><select data-answer="hyperkalemia"><option value="">Select...</option><option value="hypoglycemia">hypoglycemia</option><option value="hyperkalemia">hyperkalemia</option><option value="addison's disease">addison's disease</option><option value="hyperthermia">hyperthermia</option></select> —</p><p>* <select data-answer="Chronic Kidney Disease"><option value="">Select...</option><option value="hypothermia">hypothermia</option><option value="Chronic Kidney Disease">Chronic Kidney Disease</option><option value="hyperthermia">hyperthermia</option><option value="stroke">stroke</option></select> (CKD) and <select data-answer="End-Stage Renal Disease"><option value="">Select...</option><option value="hyperkalemia">hyperkalemia</option><option value="End-Stage Renal Disease">End-Stage Renal Disease</option><option value="addison's disease">addison's disease</option><option value="hypothermia">hypothermia</option></select><br/>(ESRD);</p><p>* Those with <select data-answer="adrenal insufficiency"><option value="">Select...</option><option value="hypothermia">hypothermia</option><option value="stroke">stroke</option><option value="adrenal insufficiency">adrenal insufficiency</option><option value="hyperkalemia">hyperkalemia</option></select>;</p><p>* Those at risk of developing <select data-answer="Acute Renal Failure"><option value="">Select...</option><option value="stroke">stroke</option><option value="hypoglycemia">hypoglycemia</option><option value="Acute Renal Failure">Acute Renal Failure</option><option value="trauma">trauma</option></select> (severe<br/>dehydration, shock, nephrotoxicity, obstruction, crush injury,<br/>compartment syndrome, and rhabdomyolysis).</p><p>3. If ahigh risk patient develops signs of hyperkalemia on 12-lead<br/>ECG they are at risk of entering sudden cardiac arrest. See table on<br/>next page.</p><p>4. Administer Calcium Chloride 1 gram lV over at least 5 minutes.</p><p>5. Administer nebulized Albuterol 2.5 mg and repeat as needed.</p><p>Medical Control Options</p><p>1... Contact medical control if the ECG changes have not resolved to<br/>obtain orders for additional doses of Calcium Chloride.</p>
+</section>
+</div><div class="section">
+<section>
+<h1>3.8 HYPERTHERMIA (ENVIRONMENTAL)</h1>
+<p>(ENVIRONMENTAL)</p><p>Standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="vascular access">vascular access</option><option value="BVM ventilation">BVM ventilation</option><option value="airway control">airway control</option><option value="cardiac monitoring">cardiac monitoring</option></select>. Routine Patient Care.</p><p>2. If you have high suspicion for <select data-answer="heat stroke"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="hyperthermia">hyperthermia</option><option value="heat stroke">heat stroke</option><option value="addison's disease">addison's disease</option></select>, take immediate steps to<br/>remove the patient from a hot environment.</p><p>3. For suspected heat cramps or <select data-answer="dehydration"><option value="">Select...</option><option value="shock state">shock state</option><option value="stroke">stroke</option><option value="dehydration">dehydration</option><option value="anaphylaxis">anaphylaxis</option></select>, initiate <select data-answer="passive cooling"><option value="">Select...</option><option value="hyperkalemia">hyperkalemia</option><option value="addison's disease">addison's disease</option><option value="stroke">stroke</option><option value="passive cooling">passive cooling</option></select><br/>techniques — move to a cool area, utilize convective cooling via<br/>fans and air conditioning, hydrate with <select data-answer="IV fluids"><option value="">Select...</option><option value="IV fluids">IV fluids</option><option value="fluid bolus">fluid bolus</option><option value="oxygen therapy">oxygen therapy</option><option value="airway control">airway control</option></select>.</p><p>4. For suspected heat exhaustion, heat stroke, or exercise-induced<br/><select data-answer="hyponatremia"><option value="">Select...</option><option value="hyponatremia">hyponatremia</option><option value="hypothermia">hypothermia</option><option value="DKA">DKA</option><option value="shock state">shock state</option></select> initiate both passive and <select data-answer="active cooling"><option value="">Select...</option><option value="trauma">trauma</option><option value="active cooling">active cooling</option><option value="stroke">stroke</option><option value="hyperkalemia">hyperkalemia</option></select> techniques —<br/>apply ice packs to the groin and axillae, initiate IV fluids, and<br/>utilization of water immersion or wetting the patient with aggressive<br/>fanning.</p><p>5. For heat stroke, anticipate the possibility of rapidly progressing<br/>shock, which can occur even after cooling the patient below 102 °F.</p><p>Medical Control Options</p><p>1. For suspected heat cramps or dehydration during medical stand-by<br/>(i.e. tent at local 5K run) and with medical control approval consider<br/>having the patient drink sodium-containing cool liquids.</p><p>2. If the cause of the hyperthermia is exertional and thermometry is<br/>available on-site, consider completing these cooling procedures in<br/>place for approximately 20 minutes with goal temperature of<br/>102.2 °F (39°C), unless additional concerns indicate immediate<br/>need for hospital care.</p>
+</section>
+<section>
+<h1>3.9 HYPOTHERMIA (ENVIRONMENTAL)</h1>
+<p>(ENVIRONMENTAL)</p><p>Standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="capnography">capnography</option><option value="vascular access">vascular access</option><option value="CPAP">CPAP</option><option value="oxygen therapy">oxygen therapy</option></select>. Routine Patient Care.</p><p>2. Always treat <select data-answer="systemic hypothermia"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="addison's disease">addison's disease</option><option value="hyperkalemia">hyperkalemia</option><option value="systemic hypothermia">systemic hypothermia</option></select> prior to addressing suspected<br/><select data-answer="frostbite"><option value="">Select...</option><option value="frostbite">frostbite</option><option value="stroke">stroke</option><option value="hyperkalemia">hyperkalemia</option><option value="asthma">asthma</option></select>.</p><p>3. Avoid rough movement and prevent further heat loss —<br/>+ Insulate from the ground and shield from wind/water;<br/>+ Move to a warm environment as soon as practical;<br/>+ Remove and wet clothing or constrictive jewelry;<br/>* Cover with warm blankets.</p><p>4. If patient’s core body temperature is below 95 °F (35°C) consider<br/><select data-answer="active rewarming"><option value="">Select...</option><option value="stroke">stroke</option><option value="addison's disease">addison's disease</option><option value="sepsis">sepsis</option><option value="active rewarming">active rewarming</option></select> with warmed (39°C) IV fluids.</p><p>5. Resuscitation of a hypothermic patient should not be ceased or<br/>abandoned until the patient has remained in arrest with a normal<br/>core body temperature.</p><p>Medical Control Options</p><p>1. If the patient fails to respond to the initial defibrillation attempt or<br/>initial drug therapy, defer subsequent defibrillation attempts or<br/>additional boluses of medication until the core temperature rises<br/>above 86°F (30°C).</p>
+</section>
+</div><div class="section">
+<section>
+<h1>3.10 NERVE AGENT/ORGANOPHOSPHATE POISONING</h1>
+<p>standing Orders</p><p>1. Ensure the patient has been appropriately decontaminated before<br/>they are move to the cold zone.</p><p>2. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="airway control">airway control</option><option value="IV fluids">IV fluids</option><option value="cardiac monitoring">cardiac monitoring</option><option value="vascular access">vascular access</option></select>. Routine Patient Care.</p><p>3. Assess for signs of <select data-answer="cholinergic toxicity"><option value="">Select...</option><option value="cholinergic toxicity">cholinergic toxicity</option><option value="anaphylaxis">anaphylaxis</option><option value="hyperthermia">hyperthermia</option><option value="DKA">DKA</option></select> — <select data-answer="SLUDGEM"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="SLUDGEM">SLUDGEM</option><option value="anaphylaxis">anaphylaxis</option><option value="hypothermia">hypothermia</option></select> (Salivation,<br/>Lacrimation, Urination, Dedication, Gastric distress, Emesis, Muscle<br/>twitching/Miosis) or Killer B’s (Bradycardia, Bronchorrhea,<br/>Bronchospasm).</p><p>4. <select data-answer="Antidotal therapy"><option value="">Select...</option><option value="DKA">DKA</option><option value="addison's disease">addison's disease</option><option value="anaphylaxis">anaphylaxis</option><option value="Antidotal therapy">Antidotal therapy</option></select> should be initiated as soon as symptoms appear<br/>but not prophylactically.</p><p>5. Antidote <select data-answer="auto-injectors"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="hypothermia">hypothermia</option><option value="hypoglycemia">hypoglycemia</option><option value="auto-injectors">auto-injectors</option></select> — 1-3 DuoDote kits — should be<br/>administered IM based on the presenting signs/symptoms — see<br/>chart on next page.</p><p>6. If symptoms persist after administration of three (3) DuoDote kits<br/>consider administration of additional doses IV —</p><p>* Atropine 2 mg |\/lO; repeat every 5 minutes until secretions<br/>clear;</p><p>* Pralidoxime 1-2 gram(s) |V/IO over 30-60 minutes</p><p>* Diazepam 10 mg IM via auto-injector OR Midazolam 6 mg IM<br/>every 10 minutes as need, OR Midazolam 2 mg |V/IO/IN every<br/>5 minutes</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p><p>Severity</p><p>Cholinergic Toxicity Signs</p><p>&amp; Symptoms</p><p>Adult Standing Orders<br/>(Patient weight &gt; 55 kg)</p><p>* Runny Nose</p><p>Administer one(1)</p><p>* Cough DuoDote kit IV.<br/>* Miosis (pupillary constriction)<br/>* Eye pain — OR—<br/>Mild * Lacrimation (excessive flow of .<br/>tears) + Atropine 2 mg |M-only.<br/>+ And either Pralidoxime<br/>600 mg IM, OR<br/>Pralidoxime 1 gram IV.<br/>All of the above and possibly to. | * Administer two(2)<br/>include — DuoDote kits IM.<br/>* Sweating (could be localized<br/>with dermal exposure) — OR—<br/>* Twitching .</p><p>Moderate |* Nausea . Atropine 4 mg iM-only.<br/>* Abdominal cramping + And either Pralidoxime<br/>* Weakness 600-1200 mg |M, OR<br/>* Disruption to visual acuity Pralidoxime 1 gram IV.<br/>* Shortness of breath/</p><p>wheezing<br/>All of the above and possibly to. |» Administer three(3)<br/>include — DuoDote kits IV.<br/>+ Vomiting<br/>* Diarrhea — OR—<br/>+ Dysphagia (drooling or .<br/>copious respiratory . Atropine 6 mg IM-only.<br/>Severe secretions) + And either Pralidoxime<br/>* Seizures 1200-1800 mg |M, OR<br/>* Decreased LOC Pralidoxime 1 gram IV.<br/>+ Apnea + Diazepam 10 mg IM via<br/>auto-injector, OR<br/>Midazolam 6-10 mg |\V/</p><p>IO/IM.</p>
+</section>
+<section>
+<h1>3.11 OBSTETRICAL EMERGENCIES</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="BVM ventilation">BVM ventilation</option><option value="CPAP">CPAP</option><option value="vascular access">vascular access</option><option value="oxygen therapy">oxygen therapy</option></select>. Routine Patient Care.</p><p>2. For <select data-answer="imminent birth"><option value="">Select...</option><option value="hyperkalemia">hyperkalemia</option><option value="sepsis">sepsis</option><option value="imminent birth">imminent birth</option><option value="asthma">asthma</option></select> expose as indicated to assess for hemorrhage/<br/>discharge, crowning, <select data-answer="prolapsed cord"><option value="">Select...</option><option value="hyperthermia">hyperthermia</option><option value="sepsis">sepsis</option><option value="prolapsed cord">prolapsed cord</option><option value="trauma">trauma</option></select>, breech or limb presentation.</p><p>3. <select data-answer="perineal inspection"><option value="">Select...</option><option value="anaphylaxis">anaphylaxis</option><option value="shock state">shock state</option><option value="DKA">DKA</option><option value="perineal inspection">perineal inspection</option></select> —<br/>* Infant's head bulges the perineum, or crowning is present;</p><p>+ |f prolapsed cord is present, elevate the fetal head off the<br/>cord using 2-3 fingers, place patient in Trendelenberg<br/>position, and rapidly transport to the nearest capable facility;</p><p>4. Support the perineum with a sterile towel and place the other hand<br/>over the occiput to promote fetal head extension;</p><p>5. Slowly deliver the head —</p><p>* Check for nuchal cord — If present, slip finger between<br/>neonate's neck and cord &amp; attempt to reduce cord by pulling<br/>it over neonate's head;</p><p>* If unable to reduce cord, clamp and cut cord if neonate's<br/>face can be cleared from perineum with immediate suction;</p><p>6. Deliver anterior shoulder —</p><p>* Position hands on either side of the head and exert a gentle<br/>downward force;</p><p>7. Deliver posterior shoulder —</p><p>* Maintain position of hands and apply a small amount of<br/>upward traction;</p><p>8. Delivery of the body —<br/>* Controlled expulsion helps to prevent perineal lacerations;</p><p>* Hold the infant securely;</p><p>* Position in a manner that facilitates the flow of blood from<br/>the placenta to the neonate;</p><p>* Dry, warm, &amp; stimulate the neonate;</p><p>9. Only if neonate exhibits respiratory depression, regardless of the<br/>presence of meconium-stained amniotic fluid, suction the<br/>oropharynx and then the nares (routine suctioning is not advised);</p><p>10. Clamp then cut the umbilical cord with sterile scissors or a scalpel<br/>leaving at least 2-4 cm of cord attached to the neonate;</p><p>11. If uncomplicated delivery with clear airway and good respiratory<br/>support, mother may hold child immediately (skin to skin)</p><p>* If mother or infant is unstable, pass infant to resuscitation<br/>team, or move to the resuscitation area if there are limited<br/>resources available;</p><p>* See newborn resuscitation for treatment.</p><p>1. For Eclamptic Seizures administer —</p><p>* Midazolam 0.1 mg/kg |V/|O/IM to maximum of 8 mg, OR<br/>Midazolam 0.2 mg/kg |N when IV access is unavailable to<br/>maximum of 10 mg.</p><p>+ Magnesium Sulfate 2-4 grams |V/|O over 5 minutes.</p><p>2. Special Consideration during cardiac arrest — if fundal height is at<br/>or above the umbilicus, manually displace the gravid uterus to the<br/>left to enhance venous return (if additional resources enable you to<br/>do so).</p><p>3. For non-compressible postpartum hemorrhage that cannot be<br/>controlled by fundal massage, skin-to-skin contact, or nursing<br/>administer Tranexamic Acid 1 gram diluted in 100 cc over 10<br/>minutes.</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+</div><div class="section">
+<section>
+<h1>3.12 PAIN/NAUSEA MANAGEMENT</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="fluid bolus">fluid bolus</option><option value="CPAP">CPAP</option><option value="vascular access">vascular access</option><option value="BVM ventilation">BVM ventilation</option></select>. Routine Patient Care.</p><p>2. For nausea administer <select data-answer="Ondansetron"><option value="">Select...</option><option value="Ondansetron">Ondansetron</option><option value="Naloxone">Naloxone</option><option value="Lorazepam">Lorazepam</option><option value="Promethazine">Promethazine</option></select> 4 mg |V/IO/IM/IN/PO.<br/>3. For pain administer either —</p><p><select data-answer="Fentanyl"><option value="">Select...</option><option value="Ketamine">Ketamine</option><option value="Ipratropium">Ipratropium</option><option value="Etomidate">Etomidate</option><option value="Fentanyl">Fentanyl</option></select> 1 mcg/kg |V/lO/IM/IN, OR;</p><p><select data-answer="Ketamine"><option value="">Select...</option><option value="Norepinephrine">Norepinephrine</option><option value="Atropine">Atropine</option><option value="Morphine">Morphine</option><option value="Ketamine">Ketamine</option></select> 0.15 mg/kg |V/IO slow push, may repeat dose one<br/>time in 20 minutes, OR;</p><p><select data-answer="Morphine"><option value="">Select...</option><option value="Morphine">Morphine</option><option value="Glucagon">Glucagon</option><option value="Ketamine">Ketamine</option><option value="Fentanyl">Fentanyl</option></select> Sulfate 0.1 mg/kg |V/IO/IM to maximum dose of 10<br/>mg, OR;</p><p><select data-answer="Ketorolac"><option value="">Select...</option><option value="hypoglycemia">hypoglycemia</option><option value="hypothermia">hypothermia</option><option value="Ketorolac">Ketorolac</option><option value="addison's disease">addison's disease</option></select> 15 mg lV, or 30 mg IM, OR;</p><p><select data-answer="Acetaminophen"><option value="">Select...</option><option value="DKA">DKA</option><option value="hyperthermia">hyperthermia</option><option value="Acetaminophen">Acetaminophen</option><option value="shock state">shock state</option></select> 15 mg/kg PO or IV to maximum dose of 1g.</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.13 POISONING/SUBSTANCE ABUSE</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="CPAP">CPAP</option><option value="vascular access">vascular access</option><option value="capnography">capnography</option><option value="fluid bolus">fluid bolus</option></select>. Routine Patient Care.<br/>2. Perform 12-Lead ECG as indicated.</p><p>3. For suspected <select data-answer="Opiate Toxicity"><option value="">Select...</option><option value="asthma">asthma</option><option value="Opiate Toxicity">Opiate Toxicity</option><option value="trauma">trauma</option><option value="stroke">stroke</option></select>, administer <select data-answer="Naloxone"><option value="">Select...</option><option value="Naloxone">Naloxone</option><option value="Atropine">Atropine</option><option value="Lorazepam">Lorazepam</option><option value="Norepinephrine">Norepinephrine</option></select> 0.4-2 mg |V/lO/<br/>IM/IN to maximum total dose of 10 mg.</p><p>4. For other suspected toxicities —<br/>* Contact <select data-answer="Poison Control"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="trauma">trauma</option><option value="asthma">asthma</option><option value="Poison Control">Poison Control</option></select> (800.222.1222)</p><p>* Contact Medical Control</p><p>Medical Control Options</p><p>1. For Calcium-Channel Blocker or B-Blocker Toxicity —</p><p>* <select data-answer="Calcium Chloride"><option value="">Select...</option><option value="Ondansetron">Ondansetron</option><option value="Calcium Chloride">Calcium Chloride</option><option value="Ipratropium">Ipratropium</option><option value="Glucagon">Glucagon</option></select> 1g |V/|O push over at least 5 minutes.</p><p>* <select data-answer="Glucagon"><option value="">Select...</option><option value="Glucagon">Glucagon</option><option value="Naloxone">Naloxone</option><option value="Ipratropium">Ipratropium</option><option value="Dexamethasone">Dexamethasone</option></select> 5-10 mg |V over 5 minutes repeated until<br/>bradycardia is resolved.<br/>2. For Tricyclic Antidepressant Toxicity, Cardiotoxicity resulting in a<br/>widened QRS/Sodium-Channel Blocker Toxicity, or Salicylate<br/>Toxicity with signs of acidosis or altered mental status —</p><p>* Sodium Bicarbonate 1 mEq/kg |V/|O.</p><p>3. For Organophosphate Toxicity —</p><p>* Refer to Protocol 3.10: Nerve Agent/Organophosphate<br/>Poisoning.<br/>4. For Cyanide Toxicity —</p><p>* Hydroxocobalamin 5 g |V/IO over 15 min diluted in 250 mL of<br/>IV fluid.</p><p>5. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.14 SEIZURES</h1>
+<p>standing Orders</p><p>1. Attempt to obtain <select data-answer="vascular access"><option value="">Select...</option><option value="cardiac monitoring">cardiac monitoring</option><option value="vascular access">vascular access</option><option value="airway control">airway control</option><option value="CPAP">CPAP</option></select>. Routine Patient Care.</p><p>2. Immediate assessment of the <select data-answer="primary survey"><option value="">Select...</option><option value="primary survey">primary survey</option><option value="stroke">stroke</option><option value="hypoglycemia">hypoglycemia</option><option value="hyperkalemia">hyperkalemia</option></select> and stabilization of<br/>life-threats.</p><p>* Consider use of nasal cannula for <select data-answer="oxygen therapy"><option value="">Select...</option><option value="cardiac monitoring">cardiac monitoring</option><option value="oxygen therapy">oxygen therapy</option><option value="capnography">capnography</option><option value="CPAP">CPAP</option></select> due to<br/>increased aspiration risk.</p><p>3. Cardiac monitor and if feasible perform 12-lead ECG.<br/>* Manage dysrhythmias per protocol.</p><p>4. If the patient is in <select data-answer="Status Epilepticus"><option value="">Select...</option><option value="sepsis">sepsis</option><option value="trauma">trauma</option><option value="Status Epilepticus">Status Epilepticus</option><option value="addison's disease">addison's disease</option></select> or a life-threat has developed<br/>as a complication from the seizure administer —</p><p>* <select data-answer="Midazolam"><option value="">Select...</option><option value="Morphine">Morphine</option><option value="Atropine">Atropine</option><option value="Midazolam">Midazolam</option><option value="Lorazepam">Lorazepam</option></select> 0.1 mg/kg |V/|O/IM to maximum of 8 mg, OR<br/>Midazolam 0.2 mg/kg |N when IV access is unavailable to<br/>maximum of 10 mg.</p><p>5. For Eclamptic Seizures administer —<br/>* Magnesium Sulfate 2-4 grams |V/lO over 5 minutes.</p><p>* Note that eclamptic seizures can occur up to several weeks<br/>postpartum.</p><p>6. Attempt neurologic assessment as soon as practical.</p><p>Medical Control Options</p><p>1. Additional doses of the above medications.</p>
+</section>
+<section>
+<h1>3.15 SEPSIS</h1>
+<p>standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="vascular access">vascular access</option><option value="CPAP">CPAP</option><option value="fluid bolus">fluid bolus</option><option value="capnography">capnography</option></select>. Routine Patient Care.</p><p>2. Identify possible sepsis — patient must have a suspected source of<br/>infection and meet at least two(2) of the following Systemic<br/>Inflammatory Response Syndrome (SIRS) Criteria —</p><p>Temperature &gt; 100.4 °F, OR Temperature &lt; 96.8 °F;</p><p>Heart rate &gt; 90 bom;</p><p>Respiratory rate &gt; 22 bpm;</p><p>Systolic blood pressure &lt; 90 mmHg, OR Mean arterial blood<br/>pressure (MAP) &lt; 65 mmHg;</p><p>New onset altered or worsening mental status;<br/>* <select data-answer="ETCO2"><option value="">Select...</option><option value="BP">BP</option><option value="GCS">GCS</option><option value="ETCO2">ETCO2</option><option value="SpO2">SpO2</option></select> &lt; 25 mmHg</p><p>3. Obtain large-bore IV access and administer aggressive fluid<br/>resuscitation (1-2 L appropriate prehospitally) starting with a 500<br/>cc IV fluid bolus — repeat boluses may be required — targeting<br/>adequate mentation (following commands) and/or a systolic blood<br/>pressure &gt; 100 mmHg.</p><p>4. If patient has limited response to IV fluid, OR presents with a MAP &lt;<br/>65 mmug with signs of poor perfusion initiate a vasopressor<br/>(Norepinephrine preferred) (refer to Protocol</p>
+</section>
+<section>
+<h1>3.16 SHOCK STATES</h1>
+<p>standing Orders</p><p>1. Attempt to obtain <select data-answer="vascular access"><option value="">Select...</option><option value="IV fluids">IV fluids</option><option value="vascular access">vascular access</option><option value="CPAP">CPAP</option><option value="oxygen therapy">oxygen therapy</option></select>. Routine Patient Care.</p><p>2. Treatment for shock is entirely dependent on the cause. Ensure you<br/>adequately assess the patient’s presentation to determine the best<br/>course of action. See chart on following pages.</p><p>3. For Distributive and (Non-Hemorrhagic) Hypovolemic causes of<br/>shock —</p><p>+ Administer aggressive <select data-answer="fluid resuscitation"><option value="">Select...</option><option value="addison's disease">addison's disease</option><option value="hyperthermia">hyperthermia</option><option value="fluid resuscitation">fluid resuscitation</option><option value="shock state">shock state</option></select> (1-2 L appropriate<br/>prehospitally) starting with a 500 cc IV fluid bolus — repeat<br/>boluses may be required.</p><p>* If patient has limited response to IV fluid, OR; presents with a<br/>MAP &lt; 65 mmHg with signs of poor perfusion initiate a<br/>vasopressor infusion —</p><p>* In neurogenic shock the target MAP is &gt; 80 mmHg.</p><p>* Norepinephrine 0.1-0.5 mcg/kg/min |V/|O (must be<br/>given through an IV pump prehospitally) OR;</p><p>* Epinephrine 2-10 mcg/min |V/lO (2 mg of 1:1000 mixed</p><p>into 250 mL of normal saline results in 15 gtts/min = 2<br/>meg/min), OR;</p><p>* Dopamine 2-20 mg/kg/min IV/IO (starting at 10 mcg/<br/>kg/min to achieve a-effects).</p><p>* Note — For resuscitation of shock Norepinephrine is the<br/>preferred vasopressor of choice. The only exceptions to this are<br/>when treating Anaphylactic Shock, or correcting Cardiogenic<br/>Shock in a patient who is bradycardic, at which point<br/>Epinephrine is the preferred vasopressor of choice.</p><p>For suspected adrenal crisis refer to Protocol</p>
+</section>
+<section>
+<h1>3.17 STROKE (CVA)</h1>
+<p>(CVA)</p><p>Standing Orders</p><p>1. Obtain <select data-answer="vascular access"><option value="">Select...</option><option value="oxygen therapy">oxygen therapy</option><option value="vascular access">vascular access</option><option value="BVM ventilation">BVM ventilation</option><option value="cardiac monitoring">cardiac monitoring</option></select>. Routine Patient Care.</p><p>2. As soon as stroke is suspected perform a rapid FAST-ED Stroke<br/>Exam to determine if rapid extrication and transport is indicated.</p><p>3. Prior to leaving the scene it is crucial to determine the patient’s<br/><select data-answer="neurologic baseline"><option value="">Select...</option><option value="neurologic baseline">neurologic baseline</option><option value="anaphylaxis">anaphylaxis</option><option value="hyperkalemia">hyperkalemia</option><option value="trauma">trauma</option></select>, and more importantly what the precise time is<br/>that they were seen at that baseline, known as a Last Known<br/>Normal.</p><p>4. Transport the patient as rapidly as possible with the head of the<br/>stretcher at 30° and notify the hospital of incoming Stroke Alert<br/>prior to arrival in an attempt to reduce the “door to needle” time<br/>(Tissue Plasminogen Activator or “TPA’).</p><p>5. Continue to perform full ALS assessment including a<br/>comprehensive neurologic exam and obtaining key history/<br/>diagnostics such as —</p><p>* PMH including whether the patient is prescribed anticoagulant<br/>or anti-platelet medications;</p><p>* Point-of-care blood glucose level;<br/>* Temperature, 12-lead ECG, and serial vital signs;</p><p>6. Ensure you are performing serial stroke exams to assess the<br/>progression or improvement/resolution of any deficits.</p><p>Medical Control Options</p><p>1. If there is strong suspicion for hemorrhagic stroke medical control<br/>can order to bypass a local stroke center and transport to a<br/>comprehensive stroke center with additional capabilities. This<br/>should only be utilized when the patient is stable enough to be<br/>transported to a further destination.</p><p>FAST-ED STROKE SCALE</p><p>Facial Palsy</p><p>Normal or minor paralysis</p><p>Partial or complete paralysis</p><p>No drift</p><p>Drift or some effort against gravity</p><p>No effort against gravity or no movement</p><p>Speech Changes</p><p>Absent</p><p>Mild to moderate</p><p>Severe, global aphasia or mute</p><p>Eye Deviation</p><p>Absent</p><p>Partial</p><p>Forced deviation</p><p>Denial/Neglect</p><p>Absent</p><p>Extinction to bilateral simultaneous stimuli in only 1<br/>sensory modality</p><p>Does not recognize their own hand or orients to<br/>only one side of the body</p><p><br/>PEDIATRIC<br/>EMERGENCIES</p><p>ak</p>
+</section>
+</div>
+</div>
+<button class="prev-btn" onclick="changeSection(-1)">Previous</button>
+<button class="next-btn" onclick="changeSection(1)">Next</button>
+<script>
+  let currentSection = 0;
+  const sections = document.querySelectorAll('.section');
+  sections[currentSection].classList.add('active');
+
+  function changeSection(step) {
+    sections[currentSection].classList.remove('active');
+    currentSection += step;
+    if (currentSection >= sections.length) currentSection = 0;
+    if (currentSection < 0) currentSection = sections.length - 1;
+    sections[currentSection].classList.add('active');
+    window.scrollTo(0, 0);
+  }
+</script>
+<button onclick="submitQuiz()" style="margin-top: 50px; font-size: 18px;">Submit Quiz</button><p id="score-output" style="font-weight: bold; font-size: 20px;"></p><script>
+function submitQuiz() {
+  const selects = document.querySelectorAll("select");
+  let score = 0;
+  selects.forEach(s => {
+    if (s.value === s.dataset.answer) {
+      score++;
+      s.style.border = "2px solid green";
+    } else {
+      s.style.border = "2px solid red";
+    }
+  });
+  document.getElementById("score-output").innerText = `You got ${score} out of ${selects.length} correct.`;
+  window.scrollTo(0, document.body.scrollHeight);
+}
+</script></div>
+<div id="result-screen" style="display: none; text-align: center;">
+<h2>Your Score</h2>
+<p id="score-output" style="font-size: 22px;"></p>
+<h3>Review Missed Questions:</h3>
+<ul id="missed-list" style="text-align: left; max-width: 800px; margin: 0 auto;"></ul>
+</div>
+<script>
+  function startQuiz() {
+    document.getElementById("home-screen").style.display = "none";
+    document.getElementById("quiz-screen").style.display = "block";
+    window.scrollTo(0, 0);
+  }
+
+  function submitQuiz() {
+    const selects = document.querySelectorAll("#quiz-screen select");
+    let score = 0;
+    let total = selects.length;
+    const missed = [];
+
+    selects.forEach(s => {
+      const questionText = s.parentElement.innerText.trim();
+      const correct = s.dataset.answer;
+      const chosen = s.value;
+      if (chosen === correct) {
+        s.style.border = "2px solid green";
+        score++;
+      } else {
+        s.style.border = "2px solid red";
+        missed.push(`${questionText} — Correct: ${correct}`);
+      }
+    });
+
+    document.getElementById("quiz-screen").style.display = "none";
+    document.getElementById("result-screen").style.display = "block";
+    document.getElementById("score-output").innerText = `You got ${score} out of ${total} correct.`;
+
+    const missedList = document.getElementById("missed-list");
+    missedList.innerHTML = "";
+    missed.forEach(text => {
+      const li = document.createElement("li");
+      li.innerText = text;
+      missedList.appendChild(li);
+    });
+
+    window.scrollTo(0, 0);
+  }
+</script>
+
     </div>
-    <button class="prev-btn" onclick="changeSection(-1)">Previous</button>
-    <button class="next-btn" onclick="changeSection(1)">Next</button>
-    <button onclick="submitQuiz()" style="margin-top: 50px; font-size: 18px;">Submit Quiz</button>
+
+    <div id="nav-buttons">
+      <button id="prev-btn" style="font-size: 18px; margin-right: 20px;">Previous</button>
+      <button id="next-btn" style="font-size: 18px;">Next</button>
+    </div>
+
+    <button id="submit-btn" style="margin-top: 20px; font-size: 18px;">Submit Quiz</button>
   </div>
 
   <div id="result-screen" style="display: none; text-align: center;">
@@ -83,61 +210,72 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const startBtn = document.getElementById("start-btn");
+      const quizScreen = document.getElementById("quiz-screen");
+      const homeScreen = document.getElementById("home-screen");
+      const resultScreen = document.getElementById("result-screen");
+      const sections = document.querySelectorAll("#quiz-screen .section");
+      let currentSection = 0;
+
       if (startBtn) {
         startBtn.addEventListener("click", function() {
-          document.getElementById("home-screen").style.display = "none";
-          document.getElementById("quiz-screen").style.display = "block";
-          window.scrollTo(0, 0);
+          homeScreen.style.display = "none";
+          quizScreen.style.display = "block";
+          if (sections.length > 0) {
+            sections[0].classList.add("active");
+          }
         });
       }
+
+      document.getElementById("prev-btn").addEventListener("click", function() {
+        if (sections.length === 0) return;
+        sections[currentSection].classList.remove("active");
+        currentSection = (currentSection - 1 + sections.length) % sections.length;
+        sections[currentSection].classList.add("active");
+        window.scrollTo(0, 0);
+      });
+
+      document.getElementById("next-btn").addEventListener("click", function() {
+        if (sections.length === 0) return;
+        sections[currentSection].classList.remove("active");
+        currentSection = (currentSection + 1) % sections.length;
+        sections[currentSection].classList.add("active");
+        window.scrollTo(0, 0);
+      });
+
+      document.getElementById("submit-btn").addEventListener("click", function() {
+        const selects = document.querySelectorAll("#quiz-screen select");
+        let score = 0;
+        let total = selects.length;
+        const missed = [];
+
+        selects.forEach(s => {
+          const questionText = s.parentElement.innerText.trim();
+          const correct = s.dataset.answer;
+          const chosen = s.value;
+          if (chosen === correct) {
+            s.style.border = "2px solid green";
+            score++;
+          } else {
+            s.style.border = "2px solid red";
+            missed.push(`${questionText} — Correct: ${correct}`);
+          }
+        });
+
+        quizScreen.style.display = "none";
+        resultScreen.style.display = "block";
+        document.getElementById("score-output").innerText = `You got ${score} out of ${total} correct.`;
+
+        const missedList = document.getElementById("missed-list");
+        missedList.innerHTML = "";
+        missed.forEach(text => {
+          const li = document.createElement("li");
+          li.innerText = text;
+          missedList.appendChild(li);
+        });
+
+        window.scrollTo(0, 0);
+      });
     });
-
-    let currentSection = 0;
-    const sections = document.querySelectorAll('.section');
-    sections[currentSection].classList.add('active');
-
-    function changeSection(step) {
-      sections[currentSection].classList.remove('active');
-      currentSection += step;
-      if (currentSection >= sections.length) currentSection = 0;
-      if (currentSection < 0) currentSection = sections.length - 1;
-      sections[currentSection].classList.add('active');
-      window.scrollTo(0, 0);
-    }
-
-    function submitQuiz() {
-      const selects = document.querySelectorAll("#quiz-screen select");
-      let score = 0;
-      let total = selects.length;
-      const missed = [];
-
-      selects.forEach(s => {
-        const questionText = s.parentElement.innerText.trim();
-        const correct = s.dataset.answer;
-        const chosen = s.value;
-        if (chosen === correct) {
-          s.style.border = "2px solid green";
-          score++;
-        } else {
-          s.style.border = "2px solid red";
-          missed.push(`${questionText} — Correct: ${correct}`);
-        }
-      });
-
-      document.getElementById("quiz-screen").style.display = "none";
-      document.getElementById("result-screen").style.display = "block";
-      document.getElementById("score-output").innerText = `You got ${score} out of ${total} correct.`;
-
-      const missedList = document.getElementById("missed-list");
-      missedList.innerHTML = "";
-      missed.forEach(text => {
-        const li = document.createElement("li");
-        li.innerText = text;
-        missedList.appendChild(li);
-      });
-
-      window.scrollTo(0, 0);
-    }
   </script>
 </body>
 </html>
