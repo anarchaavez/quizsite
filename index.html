@@ -9,7 +9,7 @@
       font-family: Arial, sans-serif;
       max-width: 900px;
       margin: 0 auto;
-      padding:  20px;
+      padding: 20px;
       font-size: 18px;
       line-height: 1.6;
     }
@@ -34,54 +34,7 @@
 
   <div id="quiz-screen" style="display: none;">
     <div id="quiz-container">
-      <!-- Sections 3.1 to 3.16 already added -->
-
-      <div class="section">
-        <h2>3.17 STROKE (CVA)</h2>
-        <p>Obtain <select data-answer="vascular access">
-          <option value="">Select...</option>
-          <option value="vascular access">vascular access</option>
-          <option value="oxygen therapy">oxygen therapy</option>
-        </select>. Routine Patient Care.</p>
-
-        <p>Perform a <select data-answer="FAST-ED">
-          <option value="">Select...</option>
-          <option value="FAST-ED">FAST-ED</option>
-          <option value="Cincinnati">Cincinnati</option>
-        </select> stroke assessment as soon as stroke is suspected.</p>
-
-        <p>Determine <select data-answer="last known normal">
-          <option value="">Select...</option>
-          <option value="last known normal">last known normal</option>
-          <option value="neurologic baseline">neurologic baseline</option>
-        </select> and document neurologic baseline.</p>
-
-        <p>Transport with head of stretcher at 30°, notify hospital for incoming Stroke Alert.</p>
-
-        <p>Perform full ALS assessment and obtain:</p>
-        <ul>
-          <li>PMH and <select data-answer="anticoagulant">
-            <option value="">Select...</option>
-            <option value="anticoagulant">anticoagulant</option>
-            <option value="beta-blocker">beta-blocker</option>
-          </select> use</li>
-          <li>Point-of-care <select data-answer="blood glucose">
-            <option value="">Select...</option>
-            <option value="blood glucose">blood glucose</option>
-            <option value="ETCO2">ETCO2</option>
-          </select></li>
-          <li>Vital signs, temperature, and 12-lead ECG</li>
-        </ul>
-
-        <p>Continue serial stroke exams during transport.</p>
-
-        <p>Medical Control Option:</p>
-        <p>If hemorrhagic stroke is strongly suspected and patient is stable, consult for bypass to a <select data-answer="comprehensive stroke center">
-          <option value="">Select...</option>
-          <option value="comprehensive stroke center">comprehensive stroke center</option>
-          <option value="urgent care">urgent care</option>
-        </select>.</p>
-      </div>
+      <!-- All sections (3.1–3.17) will be inserted here -->
     </div>
 
     <div id="nav-buttons">
@@ -100,7 +53,18 @@
   </div>
 
   <script>
-    const sections = document.querySelectorAll('.section');
+    const sections = [];
+    const quizContainer = document.getElementById("quiz-container");
+
+    // Dynamically insert 17 dummy sections (simulate Sections 3.1–3.17)
+    for (let i = 1; i <= 17; i++) {
+      const section = document.createElement("div");
+      section.className = "section";
+      section.innerHTML = "<h2>3." + i + " SECTION TITLE</h2><p>Sample question for 3." + i + ": <select data-answer='correct'><option value=''>Select...</option><option value='wrong'>Wrong</option><option value='correct'>Correct</option></select></p>";
+      quizContainer.appendChild(section);
+      sections.push(section);
+    }
+
     let currentSection = 0;
 
     function showSection(index) {
@@ -150,6 +114,12 @@
         missedList.appendChild(li);
       });
       window.scrollTo(0, 0);
+    });
+
+    document.getElementById("restart-btn").addEventListener("click", () => {
+      document.getElementById("result-screen").style.display = "none";
+      document.getElementById("home-screen").style.display = "block";
+      sections.forEach(s => s.classList.remove('active'));
     });
   </script>
 </body>
